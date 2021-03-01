@@ -1,34 +1,50 @@
 {
-  "name": "grapesjs-angular",
-  "version": "0.0.0",
+  "name": "@rakutentech/grapesjs-angular",
+  "version": "0.0.1",
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:lib": "ng build --prod grapesjs-angular",
+    "copy:license": "cp ./LICENSE ./dist/@rakutentech/grapesjs-angular",
+    "copy:readme": "cp ./README.md ./dist/@rakutentech/grapesjs-angular",
+    "copy:files": "npm run copy:license && npm run copy:readme",
+    "npm:pack": "cd dist/@rakutentech/grapesjs-angular && npm pack",
+    "package": "npm run build:lib && npm run copy:files && npm run npm:pack",
+    "npm:publish": "npm publish ./dist/@rakutentech/grapesjs-angular/rakutentech-grapesjs-angular-0.0.1.tgz --access public",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "format": "prettier -w .",
+    "format:write": "prettier -w .",
+    "format:check": "prettier -c .",
+    "clean": "rm -rf node_modules package-lock.json && npm cache verify",
+    "clean:install": "npm run clean && npm i"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
-    "@angular/animations": "~10.0.0",
-    "@angular/common": "~10.0.0",
-    "@angular/compiler": "~10.0.0",
-    "@angular/core": "~10.0.0",
-    "@angular/forms": "~10.0.0",
-    "@angular/platform-browser": "~10.0.0",
-    "@angular/platform-browser-dynamic": "~10.0.0",
-    "@angular/router": "~10.0.0",
+    "@angular/animations": "^10.1.3",
+    "@angular/common": "^10.1.3",
+    "@angular/compiler": "^10.1.3",
+    "@angular/core": "^10.1.3",
+    "@angular/forms": "^10.1.3",
+    "@angular/platform-browser": "^10.1.3",
+    "@angular/platform-browser-dynamic": "^10.1.3",
+    "@angular/router": "^10.1.3",
+    "grapesjs": "^0.16.30",
     "rxjs": "~6.5.5",
+    "save": "^2.4.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
   },
   "devDependencies": {
-    "@angular/cli": "~10.0.0",
-    "@angular/compiler-cli": "~10.0.0",
-    "@types/node": "^12.11.1",
+    "@angular-devkit/build-angular": "^0.1001.2",
+    "@angular-devkit/build-ng-packagr": "^0.1001.2",
+    "@angular/cli": "^10.1.3",
+    "@angular/compiler-cli": "^10.1.3",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0-next.1",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~5.0.0",
@@ -37,9 +53,20 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~3.3.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "ng-packagr": "^10.1.0",
+    "prettier": "2.2.1",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~3.9.5"
-  }
+    "typescript": "~3.9.7"
+  },
+  "description": "Angular wrapper for the GrapesJS library",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rakutentech/grapesjs-angular.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rakutentech/grapesjs-angular/issues"
+  },
+  "homepage": "https://github.com/rakutentech/grapesjs-angular#readme"
 }

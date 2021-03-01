@@ -1,0 +1,7 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [true, "attribute", "rakAngularGrapesjs", "camelCase"],
+    "component-selector": [true, "element", "rak-angular-grapesjs", "kebab-case"]
+  }
+}
