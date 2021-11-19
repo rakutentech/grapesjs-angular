@@ -6,7 +6,11 @@ GrapesJS Angular is an Angular wrapper around the [GrapesJS](https://grapesjs.co
 
 - [Prerequisites](#Prerequisites)
 - [Installation](#Installation)
+- [Download](#Download)
 - [Usage](#usage)
+- [Development](#Development)
+- [Changelog](https://github.com/rakutentech/grapesjs-angular/releases)
+- [Contributing](https://github.com/rakutentech/grapesjs-angular/blob/main/CONTRIBUTING.md)
 - [License](#license)
 
 ## Prerequisites
@@ -46,6 +50,12 @@ npm install @rakutentech/angular-dynamic-component-loader
 ```bash
 ng generate component editor
 ```
+
+## Download
+- NPM
+    - `npm i @rakutentech/grapesjs-angular`
+- GIT
+    - `git clone https://github.com/rakutentech/grapesjs-angular.git`
 
 ## Usage
 
@@ -135,6 +145,15 @@ _Since multiple instances of the GrapesJS Editor can be loaded, each with its ow
 ```
 
 _For more information: check out [this link](https://angular.io/guide/hierarchical-dependency-injection)_
+
+## Development
+Clone the repository and install all the necessary dependencies.
+
+```bash
+git clone https://github.com/rakutentech/grapesjs-angular.git
+cd grapesjs-angular
+npm install
+```
 
 ## License
 
