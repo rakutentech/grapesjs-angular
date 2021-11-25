@@ -1,11 +1,11 @@
 {
   "name": "@rakutentech/grapesjs-angular",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "peerDependencies": {
     "@angular/common": "^10.1.6",
     "@angular/core": "^10.1.6",
     "grapesjs": "^0.16.30",
-    "@rakutentech/angular-dynamic-component-loader": "0.0.2"
+    "@rakutentech/angular-dynamic-component-loader": "1.0.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"
